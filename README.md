@@ -15,4 +15,18 @@ This mod is a port of and heavily inspired by [Dynamic Variable Power Tools](htt
    - **Default location:** `C:\Program Files (x86)\Steam\steamapps\common\Resonite\BepInEx\`
 4. Start the game. If you want to verify that the mod is working you can check your BepInEx logs.
 
+## Features
+
+- Expanded Component UI for Dynamic Variable Spaces and all Dynamic Variable Types
+	- Dynamic Variable Space:
+		- Rename UI to apply a new space name to all linked dynamic variable under the variable space.
+		- Debug Info generation buttons:
+			- Output Variable Definitions: This outputs a list of all defined variables under a space.
+			- Output Component Hierarchy: This outputs a space tree of all linked dynamic variable components under the dynamic variable space.
+	- Dynamic Variables:
+		- Linked Space Name display with OpenInspector and OpenWorkInspector buttons (Similar to SyncRef fields.)
+		- Rename UI to apply a new name to all linked Dynamic Variable components.
+- Protoflux Node_UI generation:
+	- Source: If a dynamic variable field is used as a source in ProtoFlux the ui will include the dynamic variable name.
+
 [Open Changlog](/CHANGELOG.md)
