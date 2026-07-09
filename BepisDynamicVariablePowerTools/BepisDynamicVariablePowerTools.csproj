@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-<!--<Project Sdk="Remora.Resonite.Sdk/2.3.1">-->
 
   <PropertyGroup>
     <Version>1.0.3</Version>
@@ -24,8 +23,6 @@
     <RestoreAdditionalProjectSources>
       https://nuget-modding.resonite.net/v3/index.json;
     </RestoreAdditionalProjectSources>
-    <ResoniteTargetModLoader>BepisLoader</ResoniteTargetModLoader>
-    <GenerateDocumentationFile>false</GenerateDocumentationFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
@@ -37,12 +34,6 @@
   </ItemGroup>
 
   <!-- Game references -->
-  <ItemGroup>
-    <ResoniteReference Include="Elements.Core" />
-    <ResoniteReference Include="FrooxEngine" />
-    <ResoniteReference Include="Renderite.Shared" />
-  </ItemGroup>
-
   <ItemGroup>
     <Reference Include="Elements.Core">
       <HintPath>$(GamePath)Elements.Core.dll</HintPath>
