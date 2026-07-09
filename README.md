@@ -1,5 +1,8 @@
 # Bepis Dynamic Variable Power Tools
-[![Thunderstore Badge](https://modding.resonite.net/assets/available-on-thunderstore.svg)](https://thunderstore.io/c/resonite/)
+[![Build](https://github.com/BowenArrows2K/BepisDynamicVariablePowerTools/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/BowenArrows2K/BepisDynamicVariablePowerTools/actions/workflows/build.yml)
+
+
+[![Thunderstore Badge](https://modding.resonite.net/assets/available-on-thunderstore.svg)](https://thunderstore.io/c/resonite/p/BowenArrows/BepisDynamicVariablePowerTools/)
 
 
 A [Resonite](https://resonite.com/) mod that adds a variety of powerful functions to dynamic variables and their spaces.
