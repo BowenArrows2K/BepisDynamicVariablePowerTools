@@ -11,6 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Change text display on Protoflux Value sources to show Variable name
+- Setting to toggle to change to text display on Value sources
+
 ## [1.0.3]
 
 ### Fixed
