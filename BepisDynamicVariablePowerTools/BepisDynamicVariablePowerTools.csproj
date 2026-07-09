@@ -44,6 +44,9 @@
     <Reference Include="Renderite.Shared">
       <HintPath>$(GamePath)Renderite.Shared.dll</HintPath>
     </Reference>
+    <Reference Include="ProtoFluxBings">
+      <HintPath>$(GamePath)ProtoFluxBindings.dll</HintPath>
+    </Reference>
   </ItemGroup>
   
   <!-- Modding dependencies -->

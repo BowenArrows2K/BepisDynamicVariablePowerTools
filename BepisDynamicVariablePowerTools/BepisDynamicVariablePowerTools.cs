@@ -3,6 +3,7 @@ using BepInEx.Configuration;
 using BepInEx.Logging;
 using BepInEx.NET.Common;
 using BepInExResoniteShim;
+using BepisDynamicVariablePowerTools.Patches;
 
 namespace BepisDynamicVariablePowerTools;
 
@@ -14,6 +15,7 @@ public class BepisDynamicVariablePowerTools : BasePlugin
 
     internal static ConfigEntry<bool> Mod_Enabled;
     internal static ConfigEntry<bool> ChangeProtoFluxStringInputs;
+    internal static ConfigEntry<bool> RenameDynvarSources;
     internal static ConfigEntry<bool> DebugInfo_Enabled;
     internal static ConfigEntry<bool> DebugInfo_LinkedVars;
     internal static ConfigEntry<bool> DebugInfo_CompHierarchy;
@@ -26,6 +28,7 @@ public class BepisDynamicVariablePowerTools : BasePlugin
         HarmonyInstance.PatchAll();
         Mod_Enabled = Config.Bind("General", "Enabled", true);
         ChangeProtoFluxStringInputs = Config.Bind("General", "Change ProtoFlux String Inputs on Rename", false);
+        RenameDynvarSources = Config.Bind("General", "Rename DynVar Sources", true);
         DebugInfo_Enabled = Config.Bind("Debug Info", "Enabled", true);
         DebugInfo_LinkedVars = Config.Bind("Debug Info", "Output Linked Variables", true);
         DebugInfo_CompHierarchy = Config.Bind("Debug Info", "Output Component Hierarchy", true);
