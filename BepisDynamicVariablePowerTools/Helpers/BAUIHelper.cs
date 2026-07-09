@@ -8,8 +8,8 @@ namespace BepisDynamicVariablePowerTools.Helpers;
 internal static class BAUIHelper
 {
     private static readonly FieldInfo _refTarget = typeof(RefEditor).GetField("_targetRef", BindingFlags.Instance | BindingFlags.NonPublic);
-    private static readonly MethodInfo _openInspectorButton = typeof(RefEditor).GetMethod("OpenInspectorButon", BindingFlags.Instance | BindingFlags.NonPublic);
-    private static readonly MethodInfo _openWorkerInspectorButton = typeof(RefEditor).GetMethod("OpenWorkerInspectorButon", BindingFlags.Instance | BindingFlags.NonPublic);
+    private static readonly MethodInfo _openInspectorButton = typeof(RefEditor).GetMethod("OpenInspectorButton", BindingFlags.Instance | BindingFlags.NonPublic);
+    private static readonly MethodInfo _openWorkerInspectorButton = typeof(RefEditor).GetMethod("OpenWorkerInspectorButton", BindingFlags.Instance | BindingFlags.NonPublic);
 
     internal static void BuildRenameUI(this UIBuilder builder, IField<string> nameField, Action<string> onRename)
     {
@@ -75,14 +75,10 @@ internal static class BAUIHelper
         backingField.Reference.Target = reference;
 
         var refEditor = button.Slot.AttachComponent<RefEditor>();
-        var targetValue = (RelayRef<ISyncRef>)_refTarget?.GetValue(refEditor);
-        targetValue.Target = backingField.Reference;
+        var targetValue = ((RelayRef<ISyncRef>)_refTarget?.GetValue(refEditor)).Target = backingField.Reference;
 
-        var InspectorAction = (ButtonEventHandler)Delegate.CreateDelegate(typeof(Action<IButton, ButtonEventData>), refEditor, _openInspectorButton);
-        var WorkerInspectorAction = (ButtonEventHandler)Delegate.CreateDelegate(typeof(Action<IButton, ButtonEventData>), refEditor, _openWorkerInspectorButton);
-
-        button.Pressed.Target = InspectorAction;
-        ui.Button("↑").Pressed.Target = WorkerInspectorAction;
+        button.Pressed.Target = (ButtonEventHandler)Delegate.CreateDelegate(typeof(ButtonEventHandler), refEditor, _openInspectorButton);
+        ui.Button("↑").Pressed.Target = (ButtonEventHandler)Delegate.CreateDelegate(typeof(ButtonEventHandler), refEditor, _openWorkerInspectorButton);
 
         ui.PopStyle();
 

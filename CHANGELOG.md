@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.3]
+
+### Fixed
+
+- TryGetLinkedSpace now gets DynamicVariableSpace.
+- Open Inspector and Open Worker Inspector for Space now generates correctly. 
+
 ## [1.0.2]
 
 ### Added
