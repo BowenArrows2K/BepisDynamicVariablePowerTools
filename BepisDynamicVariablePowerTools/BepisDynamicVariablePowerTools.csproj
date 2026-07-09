@@ -13,7 +13,8 @@
     <Nullable>enable</Nullable>
     <Deterministic>true</Deterministic>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <CopyToPlugins>false</CopyToPlugins>
+    <CopyToPlugins Condition="'$(Configuration)' == 'Release'">false</CopyToPlugins>
+    <CopyToPlugins Condition="'$(Configuration)' == 'Debug'">true</CopyToPlugins>
     <ThunderstorePackable>true</ThunderstorePackable>
     <GamePath Condition="'$(ResonitePath)' != ''">$(ResonitePath)/</GamePath>
     <GamePath Condition="Exists('$(MSBuildProgramFiles32)\Steam\steamapps\common\Resonite\')">$(MSBuildProgramFiles32)\Steam\steamapps\common\Resonite\</GamePath>
