@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changes
+
+- Refactored rename dynamic variable sources, thank you [IHaveAName2653](https://github.com/IHaveAName2653)
+
 ## [1.0.4]
 
 ### Added
