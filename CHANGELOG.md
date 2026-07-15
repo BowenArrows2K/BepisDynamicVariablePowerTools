@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Change text display on Protoflux Drives to show Variable names
+
 ### Changes
 
 - Refactored rename dynamic variable sources, thank you [IHaveAName2653](https://github.com/IHaveAName2653)
