@@ -50,8 +50,8 @@ public static class RenameDynVarNodes
 
     public static void ReplaceNodeText(ProtoFluxNodeVisual visual, IValue Target)
     {
-        string fieldName = Target.Name;
-        var parent = Target.Parent;
+        string fieldName = Target?.Name;
+        var parent = Target?.Parent;
         Traverse field = Traverse.Create(parent).Field("VariableName");
         if (field.FieldExists())
         {

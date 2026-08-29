@@ -10,6 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Context Menu drop actions
 
 ## [Unreleased]
+## [1.1.2]
+
+### Added
+- Two ?
+
+### Fixed
+- Fixed null reference exception when trying to rename a variable that is not linked to a DynamicVariable.
+
 
 ## [1.1.1]
 - Bump for Rebuild
